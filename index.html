@@ -1,0 +1,105 @@
+<html> 
+
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title> The Site You ARE Looking For </title> 
+
+		<script>
+			function banner(){ 
+				var text = confirm("Are you sure you want to leave this site? You can always come back by clicking the back arrow in the top left corner."); 
+				return text; 
+			}
+			function answer(){
+				var radio = document.getElementsByName("trivia"); 
+				var selection = false;
+				var message = "";
+				
+				for(var i = 0; i < radio.length; i++) 
+					{ 
+						if(radio[i].value == "Lord" && radio[i].checked == true) 
+						{
+							selection = true; 
+						} //end if statement 
+				} //end for loop
+				if(selection == true){
+					message = message +"<b><p style='color:green'>Way to go!</p></b>";
+					} 
+				else { 
+					message = message + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+					}
+			document.getElementById("response").innerHTML = message;
+			} //end function answer
+		</script>
+	</head> 
+
+	<body id="background"> 
+		<a href="https://steagarden.wordpress.com/" onclick="return banner()"><center><header> Squid's Cup of Tea </header></center></a>
+		<nav> 
+			<ul id="navmenu">
+				<li class="navitem"> <a href="index.html">Home</a> </li>
+				<li class="navitem"> <a href="photos.html">Photo Gallery</a> </li>
+				<li class="navitem"> <a href="videos.html">Favorite Videos</a></li>
+				<li class="navitem"> <a href="aboutme.html">About Me</a></li>
+			</ul>
+		</nav>
+		<center><h1> The Site You ARE Looking For</h1></center>
+		<center><h3>A Christian Exploration of All Things Funny</h3></center>
+
+	<div id="rightside">
+
+		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ZcBBlpVtdRo?rel=0" frameborder="0" allowfullscreen></iframe></center>
+		<br>
+
+		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/hWfO1ScoJR0?rel=0" frameborder="0" allowfullscreen></iframe></center>
+
+		<audio width="400" height="300" controls>
+		<source src="music/JJD - Future NCS Release.mp3" type="audio/mpeg">
+		Sorry!  Looks like your browser does not support HTML 5 audio.
+		</audio> 
+
+	</div>
+
+	<div id="leftside">
+		<p> Welcome to a rarely-serious website!  Here, you'll find <i>clean</i> fandom-related, Judeo-Christian, or political memes; pertinent news articles; and some original content from <a href="https://www.steagarden.wordpress.com">my main blog</a> .  I may or may not <strong>shamelessly</strong> promote <a href="https://www.thinkgeek.com/">ThinkGeek</a>, <a href="https://www.snorgtees.com">SnorgTees</a>, and <a href="https://www.superherostuff.com">SuperHeroStuff.com</a> merchandise. <br> <u>Here are some things you might want to know:</u></p>
+
+	</div>
+		
+		<div class="wrap-list">
+			<ol>
+				<li class="list1"> *Disclaimer* Unless I directly claim something as my own original creation, I will always link back to the source in which I found whatever I'm talking out.  However, most memes are found on WordPress or Google, and I'm <i>not</i> going to try to trace back my steps to see exactly where I found a meme I've had on my computer for 3 years. </li>
+				<li class="list1"> My real blog is <a href="https://www.steagarden.wordpress.com">Squid's Cup of Tea</a> if you want to check it out. :)</li>
+				<li class="list1"> I am a  <span class="wrap-text">Bible-believing Christ-follower</span> who wants to protect free speech, Biblical principles, and the sanctity of life. My site's content will reflect as such. </li>
+			</ol> 
+		</div>
+		<br>
+
+		
+<br>
+
+		<div class="wrap-trivia"> 
+			<center><h2>Hebrew Trivia Question:</h2>
+			<p class="question" ">What does the word "Adonai" mean?</p>
+			<form>
+				<div id="response"> </div>
+				<input type="radio" name="trivia" value="Eternal One"> Eternal One <br> 
+				<input type="radio" name="trivia" value="Creator"> Creator <br> 
+				<input type="radio" name="trivia" value="Lord"> Lord <br> 
+				<input type="radio" name="trivia" value="Adam"> Adam <br> <br> 
+				
+				<input type="button" value="Submit" id="button" onclick="answer()">
+			</form></center>
+		</div>
+	<br>
+
+		<img class="bigimage" src="pics/shofar-heart attack-new year.jpg" />
+			<br>
+			<br>
+		<img src="pics/book-slappers.jpg" />
+
+		<hr> <center>Sydney - <a href="https://www.steagarden.wordpress.com">Squid's Cup of Tea</a></center>
+		<br> 
+
+		<center><footer>A iTeagarden Inc. Site </footer></center>
+	</body> 
+
+</html>
